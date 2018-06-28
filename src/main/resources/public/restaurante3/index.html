@@ -1,0 +1,74 @@
+<!doctype html>
+<html ng-app="app">
+	<head>
+		<title>Demonstração Inicial</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+	</head>
+
+	<body>
+    <div ng-controller="pedidoController">
+			<h1>Restaurante 3</h1>
+	    <h2 align="center">Faça seu Pedido</h2>
+    <div class="container">
+        <form ng-submit="cadastrarNovoPedido()">
+
+              <div class="row mbottom">
+                  <div class="col-xs-3 text-right">
+                     Seu nome:
+                  </div>
+                  <div class="col-xs-9">
+                    <input type="text" class="form-control" ng-model="ticket.identificacao" required>
+                  </div>
+              </div>
+
+              <div class="row mbottom">
+                  <div class="col-xs-3 text-right">
+                     Número da Mesa:
+                  </div>
+                  <div class="col-xs-2">
+                    <input type="text" class="form-control" ng-model="ticket.mesa" required>
+                  </div>
+              </div>
+
+              <div class="row mbottom">
+                  <div class="col-xs-3 text-right">
+                     Torrada - R$ 9,00
+                  </div>
+                  <div class="col-xs-9">
+                    <input type="checkbox" class="form-control" ng-model="ticket.nome1" required>
+                  </div>
+              </div>
+
+              <div class="row mbottom">
+                  <div class="col-xs-3 text-right">
+                    Xis Salada - R$ 14,00
+                  </div>
+                  <div class="col-xs-9">
+                    <input type="checkbox" class="form-control" ng-model="ticket.nome2" required>
+                  </div>
+              </div>
+
+              <div class="row mbottom">
+                 <div class="col-xs-3 text-right">
+                   fritas - R$ 10,00
+                  </div>
+                  <div class="col-xs-9">
+                    <input type="checkbox" class="form-control" ng-model="ticket.nome3" required>
+                  </div>
+              </div>
+
+              <div class="row mbottom">
+                <div class="col-xs-9 col-xs-offset-3">
+                    <button class="btn btn-danger" type="submit">Inserir</button>
+                </div>
+              </div>
+
+          </form>
+      </div>
+
+      <script src="js/app.module.js"></script>
+      <script src="js/pedidoController.js"></script>
+	</body>
+</html>
